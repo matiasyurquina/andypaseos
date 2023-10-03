@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="section-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3 class="wow fadeInUp">Todos amamos a nuestras mascotas</h3>
+                <div class="small-border"></div>
+                <p class="lead">Our commitment to quality and services ensure our clients happy. With years of experiences our team is ready to serve all your photography needs.</p>
+                <div class="spacer-single"></div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text">
+                    <i class="icon_camera_alt id-color mb20 size40"></i>
+                    <h4>Portrait Photography</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+                    <div class="spacer-single"></div>
+                    <a href="#" class="btn-text">read more</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text">
+                    <i class="icon_lightbulb_alt id-color mb20 size40"></i>
+                    <h4>Corporate Portrait</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+                    <div class="spacer-single"></div>
+                    <a href="#" class="btn-text">read more</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text">
+                    <i class="icon_pin_alt id-color mb20 size40"></i>
+                    <h4>Event Photography</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+                    <div class="spacer-single"></div>
+                    <a href="#" class="btn-text">read more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="section-est" class="side-bg no-padding bg-color text-black">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 inner-padding">
+                <h3>Registro de Usuario</h3><br><br>
+                <h4>Ingrese sus datos</h4><br><br>
+        <!--INICIO DEL FORM-->
+        <form action="" method="post"> {%csrf_token%}
+                <div class="col-md-6 col-md-offset-14 wow fadeInRight" data-wow-delay=".5s">
+                    <label for="name">Nombre: <br><input type="text" id="name" name="name" class="form-control" size="30"></label><br><br>
+                    <label for="lname">Apellido: <br><input type="text" id="lname" name="lname" class="form-control" size="30"></label><br><br>
+                    <label for="pass">Contraseña: <br><input type="password" id="pass" name="pass" class="form-control" size="30"></label><br><br>
+                    <label for="fecha_nac">Fecha de Nacimiento: <br><input type="date" id="fecha_nac" class="form-control" name="fecha_nac" value="2018-01-01" size="50"></label><br><br>
+                    <label for="cel">Celular: <br><input type="tel" id="text" name="cel" class="form-control" size="30"></label><br><br>
+                    <label for="dir">Dirección: <br><input type="text" id="dir" name="dir" class="form-control" size="30"></label><br><br>
+                    <label for="dir">Email: <br><input type="email" id="mail" name="mail" class="form-control" size="30"></label><br><br>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            
+            <div class="col-md-6 inner-padding">
+                <h3>Registro de su mascota</h3><br><br>
+                <h4>Ingrese los datos de su mascota</h4><br><br>
+                <div class="col-md-6" data-wow-delay=".5s">
+                    <label for="nameMasc">Nombre: <br><input type="text" id="name" name="name" class="form-control" size="30"></label><br><br>
+                    <label for="raza">Raza: <br><select><option id="raza" name="raza" class="form-control" value="{{raza.idRaza}}">{{raza}}</option></select></label><br><br>
+                    <label for="sexo">Sexo: <br><select id="sexo" name="sexo">
+                        <option value="False">Hembra</option>
+                        <option value="True">Macho</option>
+                    </select></label><br><br>
+                    <label for="fecha_nac">Fecha de Nacimiento: <br><input type="date" id="fecha_nac" class="form-control" name="fecha_nac" value="2018-01-01"></label><br><br>
+                    <label for="castrado">Castrado: <br>
+                        <select  id="castrado" name="castrado">
+                            <option value="False">No</option>
+                            <option value="True">Si</option>
+                        </select></label><br><br>
+                    <label for="nivel_soc">Nivel de socialización: <br>
+                        <select  id="nivel_soc" name="nivel_soc">
+                            <option value="B">Bajo</option>
+                            <option value="M">Medio</option>
+                            <option value="A">Alto</option>
+                        </select></label><br><br>
+                    <label for="obs">Observación sobre el animal (opcional): <br><input type="textarea" id="obs" name="obs" class="form-control" maxlength="128"></label><br><br>
+    
+                    <div class="spacer-single"></div>
+                    <input type="submit" class="btn btn-border light" value="Registrarme">
+        </form>
+        <!--FIN DEL FORM-->
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

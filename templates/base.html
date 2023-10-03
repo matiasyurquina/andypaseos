@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio99 is Creative Multipurpose Website Template">
+    <meta name="keywords" content="photography,photograper,multipurpose,onepage,responsive,minimal,bootstrap,template">
+    <meta name="author" content="">
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/jpreloader.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	
+    <!-- custom background -->
+    <link rel="stylesheet" href="{% static 'css/bg.css' %}" type="text/css">
+
+    <!-- color scheme -->
+    <link rel="stylesheet" href="{% static 'css/color.css' %}" type="text/css" id="colors">
+</head>
+
+<body id="homepage">
+
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Servicios</a>
+                                    <ul>
+                                        <li><a href="services.html">Paseos</a>
+                                        <li><a href="services-2.html">Guardería</a>
+                                    </ul>
+                                </li>
+                                <li><a href="portfolio-wide-4-cols.html">Nuestros trabajos</a>
+                                    <ul>
+                                        <li><a href="portfolio-wide-4-cols.html">Wide Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-wide-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-wide-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-wide-2-cols.html">2 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="portfolio-carousel-4-cols.html">Carousel Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-carousel-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-carousel-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-carousel-5-cols.html">5 Columns</a></li>
+                                                <li><a href="portfolio-carousel-6-cols.html">6 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="portfolio-contained-4-cols.html">Contained Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-contained-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-contained-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-contained-2-cols.html">2 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html"> Sobre nosotros </a></li>
+                                <li><a href="news.html"> News </a></li>
+                                <li><a href="contact.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+
+            <section id="section-video" class="full-height no-padding text-light" aria-label="section-video">
+                <div class="de-video-container">
+                    <div class="de-video-content">
+                        <div class="center-y fadeScroll text-center relative" data-scroll-speed="2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="spacer-single"></div>
+                                        <h1 class="big">Hacemos la diferencia</h1>
+                                        <div class="spacer-double"></div>
+                                        <a href="#section-portfolio" class="btn btn-custom">Ver nuestros trabajos</a>
+                                        <div class="spacer-double"></div>
+                                        <div class="spacer-double"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <video autoplay="" loop="" muted="" poster="images/video-poster.jpg">
+                        <source src="{% static 'video.mp4' %}" type="video/mp4" />
+                    </video>
+                </div>
+
+            </section>
+            <!-- section close -->
+            <!-- section service begin -->
+            <section id="section-est" class="side-bg no-padding bg-color text-white">
+                <div class="image-container col-md-6 pull-left" data-delay="0">
+                    <div class="background-image"></div>
+                </div>
+            </section>
+            <!-- section service close -->
+
+        
+        </div>
+        {% block content %}
+
+        {% endblock %}
+        <!-- footer begin -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/andypaseos/"><i class="fa fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-skype fa-lg"></i></a>
+                        <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-right">
+                    &copy; Copyright 2022 - Andy Paseos 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer close -->
+
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jpreLoader.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'js/easing.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/validation.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/enquire.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <!-- youtube video background  -->
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script>
+    <script type="text/javascript">
+        (function ($) {
+            "use strict";
+            jQuery(".player").mb_YTPlayer();
+        })(jQuery);
+    </script>
+
+</body>
+</html>

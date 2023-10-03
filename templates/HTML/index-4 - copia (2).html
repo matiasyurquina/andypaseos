@@ -1,0 +1,638 @@
+{% extends "base.html" %}
+<body id="homepage">
+
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Servicios</a>
+                                    <ul>
+                                        <li><a href="services.html">Paseos</a>
+                                        <li><a href="services-2.html">Guardería</a>
+                                    </ul>
+                                </li>
+                                <li><a href="portfolio-wide-4-cols.html">Nuestros trabajos</a>
+                                    <ul>
+                                        <li><a href="portfolio-wide-4-cols.html">Wide Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-wide-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-wide-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-wide-2-cols.html">2 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="portfolio-carousel-4-cols.html">Carousel Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-carousel-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-carousel-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-carousel-5-cols.html">5 Columns</a></li>
+                                                <li><a href="portfolio-carousel-6-cols.html">6 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="portfolio-contained-4-cols.html">Contained Style</a>
+                                            <ul>
+                                                <li><a href="portfolio-contained-4-cols.html">4 Columns</a></li>
+                                                <li><a href="portfolio-contained-3-cols.html">3 Columns</a></li>
+                                                <li><a href="portfolio-contained-2-cols.html">2 Columns</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html"> Sobre nosotros </a></li>
+                                <li><a href="news.html"> News </a></li>
+                                <li><a href="contact.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+
+            <section id="section-video" class="full-height no-padding text-light" aria-label="section-video">
+                <div class="de-video-container">
+                    <div class="de-video-content">
+                        <div class="center-y fadeScroll text-center relative" data-scroll-speed="2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="spacer-single"></div>
+                                        <h1 class="big">Hacemos la diferencia</h1>
+                                        <div class="spacer-double"></div>
+                                        <a href="#section-portfolio" class="btn btn-custom">Ver nuestros trabajos</a>
+                                        <div class="spacer-double"></div>
+                                        <div class="spacer-double"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="de-video-overlay"></div>
+
+                    <!-- load your video here -->
+                    <video autoplay="" loop="" muted="" poster="images/video-poster.jpg">
+                        <source src="{% static 'video.mp4' %}" type="video/mp4" />
+                    </video>
+
+                </div>
+
+            </section>
+
+            <!-- section begin -->
+            <section id="section-services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <h3 class="wow fadeInUp">Todos amamos a nuestras mascotas</h3>
+                            <div class="small-border"></div>
+                            <p class="lead">Our commitment to quality and services ensure our clients happy. With years of experiences our team is ready to serve all your photography needs.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+                        <!-- feature box begin -->
+                        <div class="col-md-4">
+                            <div class="text">
+                                <i class="icon_camera_alt id-color mb20 size40"></i>
+                                <h4>Portrait Photography</h4>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                <a href="#" class="btn-text">read more</a>
+                            </div>
+                        </div>
+                        <!-- feature box close -->
+
+                        <!-- feature box begin -->
+                        <div class="col-md-4">
+                            <div class="text">
+                                <i class="icon_lightbulb_alt id-color mb20 size40"></i>
+                                <h4>Corporate Portrait</h4>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                <a href="#" class="btn-text">read more</a>
+                            </div>
+                        </div>
+                        <!-- feature box close -->
+
+                        <!-- feature box begin -->
+                        <div class="col-md-4">
+                            <div class="text">
+                                <i class="icon_pin_alt id-color mb20 size40"></i>
+                                <h4>Event Photography</h4>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                <a href="#" class="btn-text">read more</a>
+                            </div>
+                        </div>
+                        <!-- feature box close -->
+
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+
+            <!-- section service begin -->
+            <section id="section-est" class="side-bg no-padding bg-color text-white">
+                <div class="image-container col-md-6 pull-left" data-delay="0">
+                    <div class="background-image"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="inner-padding">
+                            <div class="col-md-5 col-md-offset-7 wow fadeInRight" data-wow-delay=".5s">
+                                <h3>Established since 2012</h3>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<div class="spacer-single"></div>
+                                <a href="#" class="btn btn-border light">Read More</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section service close -->
+
+            <!-- section begin -->
+            <section id="section-experiences" class="text-light" data-bgcolor="#222324">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-8 col-md-offset-2">
+
+                            <div class="text-center">
+                                <h3 class="style-1">Experiencias</h3>
+                            </div>
+                            <div class="spacer-single"></div>
+
+                            <div class="timeline exp">
+                                <div class="tl-block wow fadeInUp" data-wow-delay="0">
+                                    <div class="tl-time">
+                                        <h4>2020 - Ahora</h4>
+                                    </div>
+                                    <div class="tl-bar">
+                                        <div class="tl-line"></div>
+                                    </div>
+                                    <div class="tl-message">
+                                        <div class="tl-icon">&nbsp;</div>
+                                        <div class="tl-main">
+                                            <h4>Paseos 
+                                            </h4>
+                                            Cuando empezó la pandemia tuvimos que parar, pero apenas se reabrieron las actividades volvimos con todo hasta ahora
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tl-block wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="tl-time">
+                                        <h4>2018 - 2020</h4>
+                                    </div>
+                                    <div class="tl-bar">
+                                        <div class="tl-line"></div>
+                                    </div>
+                                    <div class="tl-message">
+                                        <div class="tl-icon">&nbsp;</div>
+                                        <div class="tl-main">
+                                            <h4>Assistant Photographer
+                                            </h4>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tl-block wow fadeInUp" data-wow-delay=".6s">
+                                    <div class="tl-time">
+                                        <h4>2016 - 2018</h4>
+                                    </div>
+                                    <div class="tl-bar">
+                                        <div class="tl-line"></div>
+                                    </div>
+                                    <div class="tl-message">
+                                        <div class="tl-icon">&nbsp;</div>
+                                        <div class="tl-main">
+                                            <h4>Graphic Designer
+                                            </h4>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-portfolio" aria-label="section-portfolio" class="no-bottom">
+
+                <div class="container">
+
+                    <!-- portfolio filter begin -->
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <h3 class="wow fadeInUp">Nuestros trabajos</h3>
+                            <div class="small-border"></div>
+                            <div class="spacer-double"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-hover">
+                    <div class="owl-custom-nav">
+                        <a class="btn-next"></a>
+                        <a class="btn-prev"></a>
+                    </div>
+
+                    <div id="gallery-carousel-4" class="owl-slide">
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe images-group">
+                                <a class="simple-ajax-popup-align-top" href="project-details-1.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Briana
+												<span class="type">Portrait</span>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                </a>
+                                <img src="{% static 'images/portfolio/pf%20(1).jpg' %}" alt="" />
+                            </div>
+
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe">
+                                <a class="simple-ajax-popup-align-top" href="project-details-2.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Lauren &amp; Jacob
+												<span class="type">Artist</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{% static 'images/portfolio/pf%20(2).jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe">
+                                <a class="simple-ajax-popup-align-top" href="project-details-3.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Steve &amp; Paula
+												<span class="type">Event</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{% static 'images/portfolio/pf%20(3).jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe">
+                                <a class="simple-ajax-popup-align-top" href="project-details-4.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Thalia &amp; Simon
+												<span class="type">Commercial</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{% static 'images/portfolio/pf%20(4).jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe">
+                                <a class="simple-ajax-popup-align-top" href="project-details-5.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Sarah
+												<span class="type">Fashion</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{% static 'images/portfolio/pf%20(5).jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                        <!-- gallery carousel-item -->
+                        <div class="carousel-item">
+                            <div class="picframe">
+                                <a class="simple-ajax-popup-align-top" href="project-details-1.html">
+                                    <span class="overlay-v">
+                                        <span class="pf_text">
+                                            <span class="title">Michael
+												<span class="type">Corporate</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{% static 'images/portfolio/pf%20(6).jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery carousel-item -->
+
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-features-no-bg" data-bgcolor="#f8f8f8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <h3 class="wow fadeInUp">¿Por que elegirnos?</h3>
+                            <div class="small-border"></div>
+                            <p class="lead">Our commitment to quality and services ensure our clients happy. With years of experiences our team is ready to serve all your photography needs.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+
+                        <div id="carousel-3" class="features-carousel">
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_like id-color mb20 size40"></i>
+                                        <h4>Professional Staff</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_clock_alt id-color mb20 size40"></i>
+                                        <h4>On Time Completion</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_document_alt id-color mb20 size40"></i>
+                                        <h4>Detailed Estimated</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_currency id-color mb20 size40"></i>
+                                        <h4>Save Time and Money</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_tag_alt id-color mb20 size40"></i>
+                                        <h4>No Hidden Cost</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+
+                            <!-- feature box begin -->
+                            <div class="col-md-4 carousel-item">
+                                <div class="padding40 rounded">
+                                    <div class="text">
+                                        <i class="icon_cloud-upload_alt id-color mb20 size40"></i>
+                                        <h4>Guaranteed Works</h4>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis.
+								<div class="spacer-single"></div>
+                                        <a href="#" class="btn-text">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- feature box close -->
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+            <!-- section close -->
+
+
+        <!-- section begin -->
+        <section class="cta pt40 pb40 text-light" data-bgcolor="#222424">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4 class="mt10">Estás buscando el mejor servicio de paseos?</h4>
+                    </div>
+
+                    <div class="col-md-4 text-right">
+                        <a href="page-services.html" class="btn btn-border light">Detalles de servicio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+
+        <!-- section begin -->
+        <section id="section-offer" class="no-top no-bottom">
+            <div class="container-fluid">
+                <div class="row-fluid display-table">
+
+                    <div class="col-md-4 text-middle text-light wow fadeInRight" data-wow-delay="0" data-bgimage="url(images/background/bg-c1.jpg)">
+                        <div class="padding60 overlay70">
+                            <h4>Paseos 1</h4>
+                            <p>Nuestro compromiso con la calidad de nuestros servicios asegura la satisfacción a nuestros clientes. Con 6 años de experiencia y búsqueda continua, nuestro equipo de paseadores está listo para satisfacer sus necesidades. Estaremos felices de brindarle el mejor servicio.</p>
+                            <a href="#" class="btn btn-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-middle text-light wow fadeInRight" data-wow-delay=".1s" data-bgimage="url(images/background/bg-c2.jpg)">
+                        <div class="padding60 overlay70">
+                            <h4>Paseos 2</h4>
+                            <p>Nuestro compromiso con la calidad de nuestros servicios asegura la satisfacción a nuestros clientes. Con 6 años de experiencia y búsqueda continua, nuestro equipo de paseadores está listo para satisfacer sus necesidades. Estaremos felices de brindarle el mejor servicio.</p>
+                            <a href="#" class="btn btn-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-middle text-light wow fadeInRight" data-wow-delay=".3s" data-bgimage="url(images/background/bg-c3.jpg)">
+                        <div class="padding60 overlay70">
+                            <h4>Family Photo Package</h4>
+                            <p>Nuestro compromiso con la calidad de nuestros servicios asegura la satisfacción a nuestros clientes. Con 6 años de experiencia y búsqueda continua, nuestro equipo de paseadores está listo para satisfacer sus necesidades. Estaremos felices de brindarle el mejor servicio.</p>
+                            <a href="#" class="btn btn-custom">Read More</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- section begin -->
+        <section id="section-testimonials" class="no-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Opiniones de nuestros clientes</h3>
+                        <div class="small-border"></div>
+                    </div>
+
+                    <div class="col-md-8 col-md-offset-2 wow fadeIn">
+                        <ul class="testimonial-list style-2">
+                            <li>
+                                <p>Amo ver a mi mascota cansada de jugar y haberla pasado bien durante todo el día</p>
+                                <span>Juancito Goldstein- Yerba Buena</span>
+                            </li>
+                            <li>
+                                <p>Mis pichichos son lo mas preciado en mi vida, y no se lo daría a otra persona, confío demasiado en ustedes</p>
+                                <span>Helena Zverevsky - San Miguel de Tucumán</span>
+                            </li>
+                            <li>
+                                <p>Son tan amables, empáticos y muy predispuestos a dar lo mejor de ustedes para que nuestros perrhijos estén bien</p>
+                                <span>José Alpajerovich - Barrio Sur</span>
+                            </li>
+                        </ul>
+
+                        <div class="spacer-double"></div>
+                        <img src="{% static 'images/misc/people.png' %}" alt="" class="img-responsive wow fadeInUp">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- section close -->
+
+        <!-- section begin -->
+        <section id="section-fun-facts" class="pt30 pb30 text-light bg-color">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="10350" data-speed="2500">0</h3>
+                            <span>Paseos realizados</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="285" data-speed="2500">0</h3>
+                            <span>Mascotas cuidadas en Guardería</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="124" data-speed="2500">0</h3>
+                            <span>Clientes satisfechos</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="18" data-speed="2500">0</h3>
+                            <span>Reconocimientos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- section begin -->
+        <section id="section-quick-contact-2" class="bordertop">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 wow fadeInLeft">
+                        <div class="wm-1"></div>
+                        <i class="icon_mobile id-color size40 mb20"></i>
+                        <h6 class="id-color">Contáctese con nosotros</h6>
+                        <h4>(381) 6921500</h4>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="wm-1"></div>
+                        <i class="icon_house_alt id-color size40 mb20"></i>
+                        <h6 class="id-color">Zona</h6>
+                        <h4>Yerba Buena - <br>
+                            Tucumán</h4>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInRight">
+                        <div class="wm-1"></div>
+                        <i class="icon_mail_alt id-color size40 mb20"></i>
+                        <h6 class="id-color">Mail</h6>
+                        <h4>andrea@<br>sanchez.com</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
