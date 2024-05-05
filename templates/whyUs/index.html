@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+		<h1 id="whyUs">¿Por que nosotros?</h1>
+		<p >Tenemos la experiencia necesaria y los conocimientos</p>
+
+	<div id="main">
+		<section id="content" class="main">
+			<span class="image main"><img src="{% static 'images/andy_pics/whyus.jpg' %}" alt="" /></span>
+			<h2>Introducción</h2>
+				<p> <b>En Andy Paseos entendemos que su perro es más que una simple mascota: es un miembro invaluable de su familia. Es por eso que nos enorgullece ofrecerle un servicio de paseo de perros excepcional, respaldado por nuestra dedicación a la calidad, trayectoria, experiencia y profesionalismo inigualables.</b></p>
+			<h2>Calidad Superior</h2>
+				<p>En cada paso de nuestro proceso, nos esforzamos por ofrecer una experiencia de calidad que supere todas sus expectativas. Nuestros paseadores de perros son cuidadosamente seleccionados y capacitados para garantizar el más alto nivel de cuidado y atención para su amigo peludo.</p>
+			<h2>Trayectoria Comprobada</h2>
+				<p>Con años de experiencia en el cuidado de perros, hemos ganado la confianza y lealtad de numerosos clientes satisfechos. Nuestra reputación impecable habla por sí misma, respaldada por el amor y la dedicación que ponemos en cada paseo y encuentro con su mascota.</p>
+			<h2>Experiencia Profesional</h2>
+				<p>Nuestro equipo está compuesto por amantes de los perros con una profunda comprensión de su comportamiento y necesidades. Desde perros pequeños hasta grandes, cachorros hasta ancianos, nos adaptamos a cada uno de ellos para proporcionarles un cuidado personalizado y cariñoso.</p>
+			<h2>Entrevista Personalizada</h2>
+			<p>Reconocemos la importancia de establecer una relación sólida y de confianza con usted y su perro. Es por eso que requerimos una entrevista personal antes de aceptar nuevos clientes. Esta entrevista nos permite conocer a su perro, comprender sus necesidades individuales y garantizar una experiencia segura y satisfactoria para todos.</p>	
+			<p>En Andy Paseos, su tranquilidad y la felicidad de su perro son nuestra máxima prioridad. Elija nuestra experiencia y compromiso con la calidad, y descubra por qué somos la elección ideal para el cuidado de su compañero canino. ¡Esperamos darle la bienvenida a nuestra familia de clientes satisfechos!</p>
+			<a href="{% url 'home' %}" class="button primary">Volver al Inicio</a>
+		</section>
+
+	</div>
+
+{% endblock %}
+

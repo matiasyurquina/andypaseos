@@ -1,0 +1,87 @@
+{% extends "baseHeaderFooter.html" %}
+{% load static %}
+
+{% block content %}
+{% include 'nav.html' %}
+					<div id="main">
+						<!-- Who We Are -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>¿Quienes somos?</h2>
+										</header>
+										<p>Somos un grupo de personas dedicadas a vender una experiencia única y personalizada para tus hijos perrunos, lideradas por Andrea Sánchez, emprendedora responsable de este gran proyecto.</p>
+										<ul class="actions">
+											<li><a href="{% url 'history' %}#ourHistory" class="">Ver historia</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="{% static 'images/andy_pics/andy-whoweare.jpg' %}" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- Servicios -->
+						<section id="services" class="main special">
+							<header class="major">
+								<h2>Nuestros Servicios</h2>
+							</header>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-4"><span class="image fit"><a href="{% url 'dayCare' %}#dayCare"><img src="{% static 'images/BG2.jpg' %}" alt="" /></a></span></div>
+									<div class="col-4"><span class="image fit"><a href="{% url 'dayCare' %}"><img src="{% static 'images/BG3.jpg' %}" alt="" /></a></span></div>
+									<div class="col-4"><span class="image fit"><img src="{% static 'images/market.png' %}" alt="" /></span></div>
+								</div>
+							</div>
+							<ul class="features">
+								<li >
+									<h3>Paseos</h3>
+									<p>Contamos con una rigurosa selección de dueños que entiendan nuestro servicio y así poder seguir brindando un servicio de calidad. Si querés una entrevista, podés hacer click <a href="{% url 'login' %}#andyTitle">acá</a> .</p>
+								
+								</li>
+								
+								<li>
+									<h3>Guardería</h3>
+									<p>Cuidamos a tus canes por el tiempo que necesites, siempre y cuando tengamos disponibilidad, recordá avisarnos con tiempo especialmente para fiestas y findes largos.</p>
+								</li>
+								<li>
+									<h3>Artículos para mascotas</h3>
+									<p>Encontrá todo lo necesario para tus pichichos y gatos <a href="#">aquí</a> </p>
+								</li>
+							</ul>
+						</section>
+
+						<!-- Por que elegirnos? -->
+							<section id="why" class="main special">
+								<header class="major">
+									<h2>¿Por que elegirnos?</h2>
+								</header>
+								<p>En Andy Paseos confiamos en nuestros clientes y ellos confían en nosotros como para cuidar diariamente a sus canes.
+									<br>Si bien nuestras formas son desestructuradas, cálidas y relajadas con nuestros clientes, nuestro trabajo está muy bien estructurado y nuestros paseadores se amoldan a las reglas acordadas. <br>  
+									<b>Además lo que nos hace únicos es nuestra rigurosa selección tanto de clientes como de colegas.</b></p>
+								
+								<!-- <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p> -->
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="{% url 'whyUs' %}#whyUs" class="button primary">Ver mas</a></li>
+									</ul>
+								</footer>
+							</section>
+
+							
+
+						<!-- Get Started -->
+							<section id="contact" class="main special">
+								<header class="major">
+									<h2>Contacto</h2>
+									<p>Si querés contactarte por distintos asuntos, no dudes en escribir <br />
+									Responderemos tus dudas cuanto antes, pero danos tiempo por favor.</p>
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="{% url 'contact' %}#contactUs" class="button primary">Contactarnos</a></li>
+									</ul>
+								</footer>
+							</section>
+
+					</div>
+{% endblock %}

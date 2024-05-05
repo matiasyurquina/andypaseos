@@ -1,0 +1,76 @@
+{% extends 'login/index.html' %}
+
+<title>Andy Paseos | Paseos</title>
+
+{% block content %}
+
+<h1> Paseos </h1>
+
+      {% if user.isClient %}
+          {% if av_rides %}
+          <h2>Fechas disponibles</h2>
+          <select name="rides" id="rides">
+            {% for i in av_rides %}
+            <option value="i.idRide">i.date</option>
+            {% endfor %}
+          </select>
+          {% endif %}
+      {% else %}
+          <!-- <h2>Tu cuenta aún no fue aprobada por un administrador</h2> -->
+      {% endif %}
+      <p></p>
+      <!-- AVAILABLE BOOKING DATES -->
+      <h3>Fechas disponibles</h3>
+      <form method="post" id="form"> {% csrf_token %}
+          <select name="rides" id="rides">
+            {% for i in av_rides %}
+            <option value="{{i.idRide}}">{{i.date}}</option>
+            {% endfor %}
+          </select><br><br>
+          <input type="hidden" value="{{user.idPerson}}" id="idPerson" name="idPerson">
+          <input type="submit" value="Agendar" id="miBoton">
+      </form>
+      <!-- MY BOOKINGS -->
+      <br>
+      <p>****************************************</p>
+      
+      <h3>MIS TURNOS</h3>
+      {% if bookings %}
+      <select name="myRides" id="myRides">
+        {% for b in bookings%}
+            <option value="{{i.idRide}}">{{i.date}}</option>
+        {% endfor %}
+      </select>
+      <!-- <p>****************************************</p> -->
+      <form method="post"> {% csrf_token %}
+        <input type="submit" value="Borrar Reserva">
+      </form>
+      {% else %}
+        <p>Usted no tiene turnos agendados</p>
+      {% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+    // const btnSave = document.getElementById('btnSave');
+    const form = document.getElementById('form');
+    const rides = document.getElementById('rides');
+    
+    form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          Swal.fire({
+              title: 'Paseo del '+ rides.options[rides.selectedIndex].text,
+              text: '¿Estás seguro de reservar éste paseo?',
+              icon: 'question',
+              showCancelButton: true,
+              confirmButtonText: 'Sí',
+              cancelButtonText: 'No'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  form.submit();
+              }
+          });
+      });
+    });
+</script>
+{% endblock %}
+

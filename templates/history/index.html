@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>Andy Paseos | Historia</title>
+{% block content %}
+
+	<h1 id="ourHistory">Como empezó todo</h1>
+	<p>Nuestra Historia</p>
+	<div id="main">
+	<!-- Content -->
+	<section id="content" class="main">
+		<span class="image main"><img src="{% static 'images/andy_pics/history.jpg' %}" alt="" /></span>
+		<h2>Todo comenzó así</h2>
+			<p>Andrea siempre había sentido una conexión especial con los perros. Desde que era una niña, encontraba consuelo y alegría en la compañía de estos fieles animales. Sin embargo, su vida adulta la llevó por caminos distintos: una carrera en el mundo corporativo que la mantenía ocupada y estresada.</p>
+			<p>Un día, mientras paseaba por el parque después de un largo día de trabajo, Andrea se encontró con un perro abandonado. La mirada triste del animal la conmovió profundamente, y decidió llevarlo a casa temporalmente. Esa noche, mientras acariciaba al perro, se dio cuenta de cuánto había estado perdiendo al no seguir su pasión por los perros.</p>
+			<p>Decidida a hacer un cambio en su vida, Andrea renunció a su trabajo y se sumergió en el mundo de los perros. Comenzó a ofrecer servicios de paseo y cuidado de perros en su vecindario, utilizando sus ahorros para crear un pequeño negocio al que llamó "Andy Paseos" ya que todo el vecindario la conocía con ese sobrenombre.</p>
+			<p>Al principio, las cosas fueron difíciles. Andrea tuvo que enfrentarse a la incertidumbre financiera y a las dudas sobre si su nueva empresa tendría éxito. Pero su amor por los perros y su determinación la impulsaron hacia adelante.</p>
+			<p>Poco a poco, "Andy Paseos" comenzó a crecer. Los propietarios de perros de la zona confiaban en Andrea para cuidar a sus mascotas, sabiendo que las trataría con el mismo amor y atención que si fueran suyas propias. Con el tiempo, Andrea pudo contratar a empleados adicionales y expandir sus servicios para incluir una guardería para perros, donde los animales podían socializar y jugar en un entorno seguro y supervisado.</p>
+			<p>La reputación de "Andy Paseos" creció rápidamente, atrayendo a clientes de toda la ciudad que buscaban un cuidado de calidad para sus mascotas. Para Andrea, ver a los perros felices y saludables era la mayor recompensa de todas. Lo que comenzó como un acto de compasión hacia un perro abandonado se convirtió en una exitosa empresa que le permitió a Andrea vivir su pasión todos los días.</p>
+			<a href="{% url 'home' %}" class="button primary">Volver al Inicio</a>				
+	</section>				
+
+	</div>
+
+{% endblock %}
+			

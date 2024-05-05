@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "andyLogo.html" %}
+<div class="d-flex justify-content-between align-items-center">
+    <form action="" method="post" class="mb-3 mx-auto p-2"> {% csrf_token%}
+        <label for="name">Nombre
+            <input type="text" name="name" id="name" required></label><br>
+        
+        <label for="lname">Apellido
+            <input type="text" name="lname" id="lname" required></label><br>
+        <label for="mail">Mail
+            <input type="email" name="mail" id="mail" required></label><br>
+        <label for="cel">Celular
+            <input type="text" name="cel" id="cel" required></label><br>
+        <label for="pass">Contraseña
+            <input type="password" name="pass" id="pass" required></label><br>
+        <label for="locality">
+            <select name="locality" id="locality">
+            {% for l in locality %}
+                {{l.locality}}
+                <option value="{{l.idLocality}}">{{l.locality}}</option>
+            {% endfor %}
+        </select>
+        </label>
+        
+        <p><b>Ya tengo cuenta, quiero <a href="{% url 'login' %}#andyTitle">Loguearme</a></b></p> <br>
+
+            <input type="submit" name="submit" id="submit" class="button primary" value="Registrarme">
+
+    </form>
+</div>
+
+{% endblock %}

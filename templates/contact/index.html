@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>
+	{% block title %}Andy Paseos | Contacto{% endblock %}
+</title>
+
+{% block content %}
+		<h1 id="contactUs">Contactanos</h1>
+		<p>Contestamos tus dudas</p>
+
+	<div id="main">
+		<section id="content" class="main">
+
+			<form method="post" action="">{% csrf_token %}
+				<h2>Complete el formulario</h2>
+				<div class="row gtr-uniform">
+					<div class="col-6 col-12-xsmall">
+						<label for="name"> Nombre completo
+							<input type="text" name="name" id="name" value="" placeholder="Ej: Alejandra Martínez" />
+						</label>
+					</div>
+					<div class="col-6 col-12-xsmall">
+						<label for="email"> E-Mail
+							<input type="email" name="email" id="email" value="" placeholder="ej: emanuel@yahoo.com" />
+						</label>
+					</div>
+					<div class="col-12">
+						<label for="topic"> Asunto
+							<input type="text" name="topic" id="topic" value="" placeholder="ej: Correas para perros" />
+						</label>
+					</div>
+						
+					<div class="col-12">
+						<label for="message"> Mensaje
+							<textarea name="message" id="message" placeholder="ej: Quisiera consultar de que material es la correa" rows="6"></textarea>
+						</label>
+					</div>
+					<div class="col-12">
+						<ul class="actions">
+							<li><input type="submit" value="Enviar" class="primary" /></li>
+							<li><input type="reset" value="Limpiar" class="primary" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+			<a href="{% url 'home' %}" class="button primary">Volver al Inicio</a>				
+
+		</section>
+	</div>
+
+{% endblock %}

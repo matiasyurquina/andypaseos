@@ -1,0 +1,145 @@
+{% extends 'login/index.html' %}
+{% load static %}
+<title>Andy Paseos | Mis Mascotas</title>
+
+<script>
+ 
+    document.addEventListener('DOMContentLoaded', function(){
+    // const btnSave = document.getElementById('btnSave');
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Las carreras no se pueden detener o pausar',
+            text: '¿Estás seguro iniciar ésta carrera?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Sí',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    });
+    });    
+</script>
+
+{% block content %}
+ 
+        <!-- <code>aquí</code>. -->
+        <div class="d-flex justify-content-between align-items-center">
+       
+          <form method="post" class="mb-3 mx-auto p-2"> {% csrf_token%}
+            <h1> Mascotas </h1>
+            Agregue su mascota aquí <br><br>
+              <label for="name">Nombre<br>
+                  <input type="text" name="name" id="name" required placeholder="Ej: Coquito"></label><br><br>
+              
+              <label for="birth">Nacimiento <br>
+                  <input type="date" name="birth" id="birth" required>
+                </label><br><br>
+            
+            <label for="idRace">Raza<br>
+                <select name="idRace" id="idRace" required>
+                    {% for i in races %}
+                        <option value="{{i.idRace}}">{{i.race}}</option>
+                    {% endfor %}
+                </select>
+            </label><br><br>
+
+              <label for="pure">Puro (raza pura)<br>
+                <select name="pure" id="pure" required>
+                    <option value="False" selected>NO</option>
+                    <option value="True">SI</option>
+                </select>
+            </label><br><br>
+
+              <label for="gender">Género<br>
+                <select name="gender" id="gender" required>
+                    <option value="False" selected>HEMBRA</option>
+                    <option value="True">MACHO</option>
+                </select><br><br>
+
+              <label for="castrated">Castrado<br>
+                <select name="castrated" id="castrated" required>
+                    <option value="False" selected>NO</option>
+                    <option value="True">SI</option>
+                </select>
+              </label><br><br>
+              <label for="socLevel">Nivel de socialización <br>
+                  <select name="socLevel" id="socLevel" required>
+                    <option value="H" selected>BAJO</option>
+                    <option value="M">MEDIO</option>
+                    <option value="L">ALTO</option>
+                  </select>
+              </label><br><br>
+                    
+                  <input type="submit" name="submit" id="submit" class="button primary" value="Guardar Mascota">
+      
+          </form><br><br>
+          <p>*****************************************************************</p>
+          
+          <h2>Mis mascotas</h2><br>
+          {% if myPets %}
+          <div class="d-flex align-items-center table-responsive p-0">
+           <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nacimiento</th>
+                    <th>Raza</th>
+                    <th>Puro</th>
+                    <th>Género</th>
+                    <th>Castrado</th>
+                    <th>Nivel Soc.</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for m in myPets%}
+                <tr>
+                    <td>{{ m.name }}</td>
+                    <td>{{ m.birth }}</td>
+                    <td>{{ m.idRace.idRace }}</td>
+                    {% if m.pure == False %}
+                        <td>NO</td>
+                    {% else %}
+                        <td>SI</td>
+                    {% endif %}
+                    
+                    {% if m.gender == False %}
+                        <td>HEMBRA</td>
+                    {% else %}
+                        <td>MACHO</td>
+                    {% endif %}
+                    
+                    {% if m.castrated == False %}
+                        <td>NO</td>
+                    {% else %}
+                        <td>SI</td>
+                    {% endif %}
+
+                    {% if m.socLevel == 'H' %}
+                        <td>ALTO</td>
+                    {% elif m.socLevel == 'M' %}
+                        <td>MEDIO</td>
+                    {% else %}
+                        <td>BAJO</td>
+                    {% endif %}
+
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+          {% else %}
+                <h5>Usted aún no tiene mascotas registradas</h5>
+          {% endif %}
+          <button id="miBoton">Haz clic aquí</button>
+
+      </div>
+{% endblock %}
+
+

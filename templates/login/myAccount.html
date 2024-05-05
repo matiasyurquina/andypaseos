@@ -1,0 +1,57 @@
+{% extends 'login/index.html' %}
+{% load static %}
+
+<title>{% block title %}Andy Paseos | Mi perfil{% endblock %}</title>
+
+
+{% block content %}
+<h1> Mi Perfil </h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <form id="form" method="post" class="mb-3 mx-auto p-2"> {% csrf_token%}
+                <label for="name">Nombre<br>
+                    <input type="text" name="name" id="name" required value="{{user.first_name}}"></label><br><br>
+                
+                <label for="lname">Apellido<br>
+                    <input type="text" name="lname" id="lname" required value="{{user.last_name}}"></label><br><br>
+                <label for="mail">Mail<br>
+                    <input type="email" name="mail" id="mail" required value="{{user.email}}" disabled></label><br><br>
+                <label for="cel">Celular<br>
+                    <input type="text" name="cel" id="cel" required value="{{user.username}}" disabled></label><br><br>
+                <label for="pass">Contraseña<br>
+                    <input type="password" name="pass" id="pass" value=""></label><br><br>
+                <label for="locality">
+                    <select name="locality" id="locality">
+                        <option value="{{user.idLocality.idLocality}}">{{user.idLocality.locality}}</option>
+                    </select>
+                </label>
+                <br><br>
+                <input type="hidden" value="{{user.idPerson}}" id="idPerson" name="idPerson">
+                    <input type="submit" name="submit" id="submit" class="button primary" value="Guardar">
+        
+            </form>
+      </div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function(){
+        const form = document.getElementById('form');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Cambios en tus datos',
+                text: '¿Estás seguro de guardar tus datos?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Sí',
+                cancelButtonText: 'No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+
+        });    
+    </script>
+
+{% endblock %}

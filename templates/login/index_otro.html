@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Mi cuenta | AP</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'><link rel="stylesheet" href="{% static 'assets/css/style2.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <header>
+      <a href="{% url 'dashboard' %}">Andy Paseos</a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a href="{% url 'dashboard' %}">
+          <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'ride' %}">  
+          <i class="zmdi zmdi-link active"></i> Paseos
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'dayCare' %}">
+          <i class="zmdi zmdi-widgets"></i> Guardería
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'interview' %}">
+          <i class="zmdi zmdi-calendar"></i> Entrevista
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'myPets' %}">
+          <i class="zmdi zmdi-calendar"></i> Mis Mascotas
+        </a>
+      </li> 
+      <li>
+        <a href="#">
+          <i class="zmdi zmdi-notifications"></i> Notificaciones
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-power text-danger"></i>
+            </a>
+          </li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      {% block content %}
+      <h1> Bienvenido a su cuenta de Andy Paseos </h1>
+      <!-- <p>
+        Make sure to keep all page content within the 
+        <code>#content</code>.
+      </p> -->
+      {% endblock %}
+    </div>
+  </div>
+</div>
+<!-- partial -->
+</body>
+</html>

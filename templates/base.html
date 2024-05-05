@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<html>
+	<head>
+		<title>Andy Paseos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	
+	<body class="is-preload">
+			<div id="wrapper">
+				{% block content %}
+
+        		{% endblock %}
+					<!-- <footer id="footer">
+						<section>
+							<dl class="icons">
+								<dt>Operamos en:</dt>
+								<dd>Yerba Buena y San Miguel de Tucumán (centro) &bull; Argentina</dd>
+							</dl>
+						</section>
+
+						<ul class="icons">
+							<dl class="icons">
+								<dt>Redes:</dt>
+							</dl>
+							<li><a href="https://www.facebook.com/profile.php?id=100086006251132" target="_blank" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/andypaseos/" target="_blank" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Diseñado y desarrollado por <a href="https://matiasyurquina.pythonanywhere.com/" target="_blank">Matias Yurquina</a>.</p>
+					</footer> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+			<script src="{% static 'assets/css/style.css' %}"></script>
+			<script src="{% static 'assets/css/bootstrap.min.css' %}"></script>
+
+	</body>
+</html>

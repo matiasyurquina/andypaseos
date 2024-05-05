@@ -1,0 +1,88 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> {% block title %} Andy Paseos | Mi cuenta {% endblock %} </title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css'><link rel="stylesheet" href="{% static 'nav/style.css' %}">
+
+</head>
+
+<body>
+  <div id="wrapper">
+   <div class="overlay"></div>
+        <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+     <ul class="nav sidebar-nav">
+        <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <a href="{% url 'dashboard' %}">Andy Paseos</a></div></div>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"  data-toggle="dropdown">Paseos <span class="caret"></span></a>
+              <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                <div class="dropdown-header"></div>
+                <li><a href="{% url 'ride' %}">Turnos</a></li>
+                <li><a href="{% url 'ride' %}">Historial de reservas</a></li>
+              </ul>
+          </li>
+          <li><a href="{% url 'dayCare' %}">Guardería</a></li>
+          {% if not user.isClient %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"  data-toggle="dropdown">Entrevista <span class="caret"></span></a>
+              <ul class="dropdown-menu animated fadeInLeft" role="menu">
+                <div class="dropdown-header"></div>
+                <li><a href="{% url 'interview' %}">Ver turnos</a></li>
+ç                <li><a href="#">Ver link de entrevista</a></li>
+              </ul>
+          </li>
+          {% endif %}
+        <li><a href="{% url 'notifications' %}">Notificaciones</a></li>
+        <li><a href="{% url 'myPets' %}">Mis mascotas</a></li>
+        <li><a href="{% url 'myAccount' %}">Mi cuenta</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+
+  <div id="page-content-wrapper">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                      {% block content %}
+    
+                        <h1>Bienvenido </h1>
+                        {% if user.isClient  %}
+                            <p>Ya podés reservar turnos para paseos y guardería</p>
+                        {% else %}
+                            <p>Tu cuenta aún no se aprobó, por favor esperá a que un administrador lo haga, gracias por tu espera! </p>
+                        {% endif %}
+                      {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- /#wrapper -->
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js'></script><script  src="{% static 'nav/script.js' %}"></script>
+
+</body>
+</html>
